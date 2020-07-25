@@ -34,7 +34,7 @@ const loginTeacher=(req,res)=>{
                 return;
                }
                if(rows && rows.length){
-                const token= commonFunc.generateJwtToken(req.body.userName)
+                const token= commonFunc.generateJwtToken(rows[0].id)
                 result.push(token)
                 responseHandler(res,0,"success",result)
                }else{

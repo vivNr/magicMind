@@ -17,7 +17,7 @@ const addMarks=(req,res,studentID)=>{
           
             const id=commonFunc.generateUniqueIds()
             const sql=`insert into tbl_marks set id='`+id+`' ,studentId='`+studentID+`' 
-             ,totalMarks='`+req.body.TotalMarks+`' ,grade='`+grade+`' ,teacherId='`+req.body.userName+`'`;
+             ,totalMarks='`+req.body.TotalMarks+`' ,grade='`+grade+`' ,teacherId='`+req.body.teacherId+`'`;
               dbmaster.query(sql, (err, rows) => {
                   if (err) {
                     reject(err);

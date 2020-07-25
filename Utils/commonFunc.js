@@ -12,9 +12,9 @@ const getRandomInt=(min,max)=>{
     return genaratedId;
     }
   
-  const  generateJwtToken=(userName)=>{
+  const  generateJwtToken=(id)=>{
         const token = jwt.sign({
-            userName:userName,
+            teacherId:id,
         }, process.env.SECRET_KEY);
         return token;
     }

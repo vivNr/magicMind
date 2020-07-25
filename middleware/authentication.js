@@ -13,11 +13,11 @@ const responseHandler=require("../Utils/fuctionHandler");
      if(err){
       responseHandler(res,1,"invalid user",[])
       return;
-     }if(!decoded.userName){
+     }if(!decoded.teacherId){
       responseHandler(res,1,"invalid user",[])
   
      }else{
-      req["body"].teacher=decoded.userName;
+      req["body"].teacherId=decoded.teacherId;
        next();  
      }
       });
