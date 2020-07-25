@@ -1,0 +1,29 @@
+{
+  "name": "apidocs",
+  "version": "1.0.0",
+  "description": "auto fantionalities",
+  "main": "server.js",
+  "scripts": {
+    "dev-server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vivek narayan",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "request": "^2.88.2",
+    "xlsx-parse-json": "^3.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
