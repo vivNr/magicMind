@@ -1,6 +1,6 @@
 const responseHandler=require("../Utils/fuctionHandler");
 const dbmaster=require("../database/db_config_mysql").localConnect();
-const commonFunc=require("../Utils/commonFunc")
+const commonFunc=require("../Utils/commonFunc");
 
 
 

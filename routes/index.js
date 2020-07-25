@@ -12,8 +12,11 @@ router.post("/loginTeacher", teacherController.loginTeacher); //version
 
 const studentController=require("../controllers/studentController");
 router.post("/addStudent",authentication, studentController.addStudent); //version
-router.post("/getAllStudent",authentication, studentController.getAllStudent); //version
+router.get("/getAllStudent",authentication, studentController.getAllStudent); //version
 
+
+const test1 = require('./test1').router;
+const test2 = require('./test2').router;
 
 
 

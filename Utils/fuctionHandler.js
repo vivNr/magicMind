@@ -1,3 +1,4 @@
+//for proper respose to client
 module.exports=function resposeSend(res,errCode,errMsg,result){
     const error={};
     const retArr={};
