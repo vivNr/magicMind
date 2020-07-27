@@ -38,3 +38,6 @@ http:localhost:3000/getAllStudent
 header=>authorization:teacherToken
 methode:get
 ```
+```
+All other routes should be redirected to 404 start
+```
