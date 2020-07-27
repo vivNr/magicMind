@@ -41,3 +41,7 @@ methode:get
 ```
 All other routes should be redirected to 404 start
 ```
+
+```
+test1 and test2 route communicating with each other via event
+```
