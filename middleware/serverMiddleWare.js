@@ -6,5 +6,4 @@ app.use(bodyParser.json())
 
 //routes
 app.use("/", require("../routes/index"));
-app.use("/test1", require("../routes/test1Route"));
-app.use("/test1", require("../routes/test2Route"));
+
