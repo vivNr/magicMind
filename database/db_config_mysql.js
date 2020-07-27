@@ -3,7 +3,7 @@ const mysql=require("mysql");
     const host = process.env.DB_HOST;
     const user =process.env.DB_USER_NAME;
     const password =process.env.DB_PASSWORD;
-
+//msql config and set connections
     var mysqlConnectOpts = {
         connectionLimit: 2000000, //increase limit for multiple connections
         waitForConnections: true,

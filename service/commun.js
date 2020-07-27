@@ -1,6 +1,6 @@
 const EventEmitter = require('events').EventEmitter;
 const evt = new EventEmitter();
-
+//event for communication betwwen two route
 module.exports = {
   saveData: function(data) {
     
@@ -10,3 +10,5 @@ module.exports = {
     evt.on('myEvent', handler);
   }
 };
+
+

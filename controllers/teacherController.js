@@ -2,7 +2,7 @@ const responseHandler=require("../Utils/fuctionHandler");
 const dbmaster=require("../database/db_config_mysql").localConnect();
 const commonFunc=require("../Utils/commonFunc")
 
-
+//signUpTeacher
 const signUpTeacher=(req,res)=>{
   const result=[];
  const id=commonFunc.generateUniqueIds()
@@ -22,7 +22,7 @@ const signUpTeacher=(req,res)=>{
     }
 }
 
-
+//loginTeacher
 const loginTeacher=(req,res)=>{
  
     const result=[];

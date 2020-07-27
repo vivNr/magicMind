@@ -3,7 +3,7 @@ const dbmaster=require("../database/db_config_mysql").localConnect();
 const commonFunc=require("../Utils/commonFunc");
 
 
-
+//addMarks
 const addMarks=(req,res,studentID)=>{
 
 
@@ -31,7 +31,7 @@ const addMarks=(req,res,studentID)=>{
     
 }
 
-
+//addStudent
 const addStudent=(req,res)=>{
   const result=[];
  const id=commonFunc.generateUniqueIds()
@@ -52,15 +52,24 @@ const addStudent=(req,res)=>{
     }
 }
 
+//getAllStudent
 const getAllStudent=(req,res)=>{
  
     const result=[];
        try{
-         const sql=`select id,studentName,roll,class,schoolId,
-         (select  totalMarks from tbl_marks where studentId=id) as totalMarks,
-         (select  grade from tbl_marks where studentId=id) as grade,
-         (select  teacherId from tbl_marks where studentId=id) as teacherId
-          from tbl_student `;
+          const sql=`    SELECT 
+          s.studentName, 
+          s.roll, 
+          s.class, 
+          s.schoolId,
+          m.totalMarks,
+          m.grade,
+          m.teacherId
+         FROM
+         tbl_student s
+        INNER JOIN tbl_marks m
+        ON s.id = m.studentId`;
+      
            dbmaster.query(sql, (err, rows) => {
                if (err) {
                 responseHandler(res,0,"success",result)

@@ -2,7 +2,7 @@
   
 const jwt= require("jsonwebtoken");
 const responseHandler=require("../Utils/fuctionHandler");
-  
+  //authentication for teacher
   module.exports=function resposeSend(req,res,next){
     const auth=req.headers['authorization'];
     if(!auth){
